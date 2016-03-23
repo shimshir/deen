@@ -1,0 +1,29 @@
+{
+  "name": "deen",
+  "version": "0.0.1",
+  "description": "Halid frontend.",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "path": "^0.12.7",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
+  },
+  "devDependencies": {
+    "babel-preset-es2016": "^6.0.6",
+    "babel-preset-react": "^6.5.0",
+    "babel-runtime": "^6.6.1",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "postinstall": "npm run build",
+    "prestart": "npm install",
+    "build": "browserify app/index.js -t [ babelify --presets [ es2016 react ] ] -o public/static/scripts/app.js"
+  },
+  "author": "Admir Memic",
+  "license": "ISC"
+}

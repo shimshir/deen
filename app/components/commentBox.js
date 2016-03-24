@@ -1,7 +1,7 @@
 import React from 'react';
 
 var CommentBox = React.createClass({
-  render: function() {
+  render () {
     return (
       <div className="commentBox">
         Hello, world! I am a CommentBox.

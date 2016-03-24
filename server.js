@@ -3,11 +3,11 @@ var path = require('path');
 var express = require('express');
 var bodyParser = require('body-parser')
 
-var app = express();
+var server = express();
 
-app.use(bodyParser.urlencoded({extended:false}));
+server.use(bodyParser.urlencoded({extended:false}));
 
-app.use(function (req, res, next) {
+server.use(function (req, res, next) {
   res.setHeader('Cache-Control', 'no-cache');
   if (path.extname(req.path).length > 0) {
     next();
@@ -18,9 +18,8 @@ app.use(function (req, res, next) {
   }
 });
 
-app.use(express.static(path.join(__dirname, 'public')));
+server.use(express.static(path.join(__dirname, 'public')));
 
-app.set('port', (process.env.PORT || 3000));
-app.listen(app.get('port'), function() {
-  console.log('Server started: http://localhost:' + app.get('port') + '/');
-});
+server.set('port', (process.env.PORT || 3000));
+
+module.exports = server;

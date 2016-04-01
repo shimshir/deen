@@ -1,12 +1,19 @@
-import ReactDOM from 'react-dom'
-import React from 'react'
+import { createStore } from 'redux'
 import ActionCreators from './actionCreators.js'
-import CommentBox from './components/commentBox.js'
+import Reducer from './reducer.js'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import MainComponent from './components/mainComponent.js'
 
-console.log(ActionCreators.addTodo('testAdd'));
+const store = createStore(Reducer)
 
+console.log(store.getState())
+
+const unsubscribe = store.subscribe(() =>
+  console.log(store.getState())
+)
 
 ReactDOM.render(
-  <CommentBox />,
+  <MainComponent store={ store } action={ () => ActionCreators.addTodo("42") }/>,
   document.getElementById('content')
-);
+)

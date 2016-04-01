@@ -5,7 +5,7 @@ var babelify = require("babelify");
 var walk = require('walk');
 
 var brofy = browserify({ debug: true })
-              .transform(babelify, { presets: ["es2016", "react"] })
+              .transform(babelify, { presets: ["es2015", "react"] })
               .require(path.join(__dirname, 'app/index.js'), { entry: true })
               .on("bundle", function (bundle) {
                 console.log("Piping bundle stream.");

@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import { ADD_TODO, REMOVE_TODO, COMPLETE_TODO, SET_VISIBILITY_FILTER } from './actionTypes.js'
-import VisiblityFilters from './visibilityFilters.js'
+import { ADD_TODO, REMOVE_TODO, COMPLETE_TODO, SET_VISIBILITY_FILTER } from './actionTypes'
+import VisiblityFilters from './visibilityFilters'
 
 function visibilityFilter(visiblityFilterState = VisiblityFilters.SHOW_ALL, action) {
   switch (action.type) {

@@ -1,9 +1,9 @@
 import { createStore } from 'redux'
-import ActionCreators from './actionCreators.js'
-import Reducer from './reducer.js'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import MainComponent from './components/mainComponent.js'
+import MainComponent from './components/mainComponent'
+import ActionCreators from './actionCreators'
+import Reducer from './reducer'
 
 const store = createStore(Reducer)
 
@@ -14,6 +14,6 @@ const unsubscribe = store.subscribe(() =>
 )
 
 ReactDOM.render(
-  <MainComponent store={ store } action={ () => ActionCreators.addTodo("42") }/>,
+  <MainComponent store={ store } />,
   document.getElementById('content')
 )

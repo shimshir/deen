@@ -20,6 +20,7 @@ var options = {
     file: function (root, fileStats, next) {
       var filePath = path.join(root, fileStats.name);
       fs.watch(filePath, function(e) {
+        console.log(e);
         if (e == 'change') {
           console.log(filePath + ' changed, starting browserify.');
           brofy

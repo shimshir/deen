@@ -10,7 +10,7 @@ var brofy = browserify({ debug: true })
               .on("bundle", function (bundle) {
                 console.log("Piping bundle stream.");
                 bundle
-                  .pipe(fs.createWriteStream(path.join(__dirname, 'public/static/scripts/app.js')))
+                  .pipe(fs.createWriteStream(path.join(__dirname, 'public/static/scripts/bundle.js')))
                   .on('finish', function() { console.log("Created bundle file."); })
               });
 

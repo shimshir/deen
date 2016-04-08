@@ -24,7 +24,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node start.js",
     "postinstall": "npm run build",
-    "build": "browserify app/index.js -t [ babelify --presets [ es2015 react ] ] -o public/static/scripts/app.js"
+    "build": "browserify app/index.js -t [ babelify --presets [ es2015 react ] ] -o public/static/scripts/bundle.js"
   },
   "author": "Admir Memic",
   "license": "ISC"

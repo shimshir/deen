@@ -1,19 +1,15 @@
-import { createStore } from 'redux'
 import React from 'react'
-import ReactDOM from 'react-dom'
-import MainComponent from './components/mainComponent'
-import ActionCreators from './actionCreators'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
 import Reducer from './reducer'
+import App from './components/app'
 
-const store = createStore(Reducer)
+let store = createStore(Reducer)
 
-console.log(store.getState())
-
-const unsubscribe = store.subscribe(() =>
-  console.log(store.getState())
-)
-
-ReactDOM.render(
-  <MainComponent store={ store } />,
-  document.getElementById('content')
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
 )

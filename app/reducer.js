@@ -31,7 +31,8 @@ const todos = (todosState = [], action) => {
         todo(undefined, action)
       ]
     case REMOVE_TODO:
-      return todosState.filter((todo, index) => index !== action.index)
+      const nextTodosState = todosState.filter((todo) => todo.id !== action.id)
+      return nextTodosState
     case TOGGLE_TODO:
       return todosState.map(todoState =>
         todo(todoState, action)

@@ -1,19 +1,20 @@
 import React, { PropTypes } from 'react'
-import Todo from './todo'
+import Todo from '../todo'
 
-const TodoList = ({ todos, onTodoClick }) => (
+const TodoListView = ({ todos, onTodoClick, onRemoveButtonClick }) => (
   <ul>
     {todos.map(todo =>
       <Todo
         key={todo.id}
         {...todo}
         onClick={() => onTodoClick(todo.id)}
+        onRemoveButtonClick={() => onRemoveButtonClick(todo.id)}
       />
     )}
   </ul>
 )
 
-TodoList.propTypes = {
+TodoListView.propTypes = {
   todos: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     completed: PropTypes.bool.isRequired,
@@ -22,4 +23,4 @@ TodoList.propTypes = {
   onTodoClick: PropTypes.func.isRequired
 }
 
-export default TodoList
+export default TodoListView

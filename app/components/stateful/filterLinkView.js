@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 
-const Link = ({ active, children, onClick }) => {
+const FilterLinkView = ({ active, children, onFilterLinkClick }) => {
   if (active) {
     return <span>{children}</span>
   }
@@ -9,7 +9,7 @@ const Link = ({ active, children, onClick }) => {
     <a href="#"
        onClick={e => {
          e.preventDefault()
-         onClick()
+         onFilterLinkClick()
        }}
     >
       {children}
@@ -17,10 +17,10 @@ const Link = ({ active, children, onClick }) => {
   )
 }
 
-Link.propTypes = {
+FilterLinkView.propTypes = {
   active: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
-  onClick: PropTypes.func.isRequired
+  onFilterLinkClick: PropTypes.func.isRequired
 }
 
-export default Link
+export default FilterLinkView

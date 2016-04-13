@@ -1,13 +1,13 @@
 import React, { PropTypes } from 'react'
 
-const Todo = ({ onClick, completed, text }) => (
-  <li
-    onClick={onClick}
-    style={ {
-      textDecoration: completed ? 'line-through' : 'none'
-    }}
-  >
-    {text}
+const Todo = ({ onClick, onRemoveButtonClick, completed, text }) => (
+  <li>
+    <span
+      onClick={onClick}
+      style={{textDecoration: completed ? 'line-through' : 'none'}}>
+      {text}
+    </span>
+    <button onClick={onRemoveButtonClick}>X</button>
   </li>
 )
 

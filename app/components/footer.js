@@ -1,21 +1,22 @@
 import React from 'react'
-import FilterLink from '../containers/filterLink'
+import FilterLinkCont from './stateful/filterLinkCont'
+import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from '../visibilityFilters'
 
 const Footer = () => (
   <p>
     Show:
     {" "}
-    <FilterLink filter="SHOW_ALL">
+    <FilterLinkCont filter={SHOW_ALL}>
       All
-    </FilterLink>
+    </FilterLinkCont>
     {", "}
-    <FilterLink filter="SHOW_ACTIVE">
+    <FilterLinkCont filter={SHOW_ACTIVE}>
       Active
-    </FilterLink>
+    </FilterLinkCont>
     {", "}
-    <FilterLink filter="SHOW_COMPLETED">
+    <FilterLinkCont filter={SHOW_COMPLETED}>
       Completed
-    </FilterLink>
+    </FilterLinkCont>
   </p>
 )
 

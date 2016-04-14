@@ -21,6 +21,12 @@ server.use(express.static(path.join(__dirname, 'public')));
 
 server.set('port', (process.env.PORT || 3000));
 
-server.listen(server.get('port'), function() {
-	console.log('Server started: http://localhost:' + server.get('port') + '/');
-});
+var serverStarter = {
+	start: function() {
+		server.listen(server.get('port'), function() {
+			console.log('Server started: http://localhost:' + server.get('port') + '/');
+		});
+	}
+}
+
+module.exports = serverStarter

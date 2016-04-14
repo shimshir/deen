@@ -1,4 +1,3 @@
-var fs = require('fs');
 var path = require('path');
 var express = require('express');
 var bodyParser = require('body-parser')
@@ -22,4 +21,6 @@ server.use(express.static(path.join(__dirname, 'public')));
 
 server.set('port', (process.env.PORT || 3000));
 
-module.exports = server;
+server.listen(server.get('port'), function() {
+	console.log('Server started: http://localhost:' + server.get('port') + '/');
+});

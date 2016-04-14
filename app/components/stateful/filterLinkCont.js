@@ -3,22 +3,22 @@ import { setVisibilityFilter } from '../../actionCreators'
 import FilterLinkView from './filterLinkView'
 
 const mapStateToProps = (state, ownProps) => {
-  return {
-    active: ownProps.filter === state.visibilityFilter
-  }
+	return {
+		active: ownProps.filter === state.visibilityFilter
+	}
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  return {
-    onFilterLinkClick: () => {
-      dispatch(setVisibilityFilter(ownProps.filter))
-    }
-  }
+	return {
+		onFilterLinkClick: () => {
+			dispatch(setVisibilityFilter(ownProps.filter))
+		}
+	}
 }
 
 const FilterLinkCont = connect(
-  mapStateToProps,
-  mapDispatchToProps
+	mapStateToProps,
+	mapDispatchToProps
 )(FilterLinkView)
 
 export default FilterLinkCont

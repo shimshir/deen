@@ -4,11 +4,11 @@ import AddTodo from './addTodo'
 import TodoListCont from './stateful/todoListCont'
 
 const App = () => (
-  <div>
-    <AddTodo />
-    <TodoListCont />
-    <Footer />
-  </div>
+	<div>
+		<AddTodo />
+		<TodoListCont />
+		<Footer />
+	</div>
 )
 
 export default App

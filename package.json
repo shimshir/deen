@@ -1,32 +1,32 @@
 {
-  "name": "deen",
-  "version": "0.0.1",
-  "description": "Halid frontend.",
-  "repository": "https://github.com/shimshir/deen.git",
-  "main": "start.js",
-  "dependencies": {
-    "body-parser": "^1.15.0",
-    "express": "^4.13.4",
-    "path": "^0.12.7",
-    "react": "^0.14.7",
-    "react-dom": "^0.14.7",
-    "react-redux": "^4.4.1",
-    "redux": "^3.3.1"
-  },
-  "devDependencies": {
-    "babel-preset-es2015": "^6.6.0",
-    "babel-preset-react": "^6.5.0",
-    "babel-runtime": "^6.6.1",
-    "babelify": "^7.2.0",
-    "browserify": "^13.0.0",
-    "walk": "^2.3.9"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node start.js",
-    "postinstall": "npm run build",
-    "build": "browserify app/index.js -t [ babelify --presets [ es2015 react ] ] -o public/static/scripts/bundle.js"
-  },
-  "author": "Admir Memic",
-  "license": "ISC"
+	"name": "deen",
+	"version": "0.0.1",
+	"description": "Halid frontend.",
+	"repository": "https://github.com/shimshir/deen.git",
+	"main": "start.js",
+	"dependencies": {
+		"body-parser": "^1.15.0",
+		"express": "^4.13.4",
+		"path": "^0.12.7",
+		"react": "^0.14.7",
+		"react-dom": "^0.14.7",
+		"react-redux": "^4.4.1",
+		"redux": "^3.3.1"
+	},
+	"devDependencies": {
+		"babel-preset-es2015": "^6.6.0",
+		"babel-preset-react": "^6.5.0",
+		"babel-runtime": "^6.6.1",
+		"babelify": "^7.2.0",
+		"browserify": "^13.0.0",
+		"walk": "^2.3.9"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node start.js",
+		"postinstall": "npm run build",
+		"build": "browserify app/index.js -t [ babelify --presets [ es2015 react ] ] -o public/static/scripts/bundle.js"
+	},
+	"author": "Admir Memic",
+	"license": "ISC"
 }

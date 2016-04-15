@@ -12,11 +12,10 @@ var webpackWatcher = {
 			function(err, stats) {
 				var output = stats.toString({ colors: true });
 				var outputLines = output.split('\n');
-				var searchPattern = new RegExp('built');
 				for (var i = 0; i < outputLines.length; i++) {
 					if (i < 6)
 						console.log(outputLines[i]);
-					else if (searchPattern.test(outputLines[i]))
+					else if (outputLines[i].indexOf('built') != -1)
 						console.log(outputLines[i]);
 				}
 			}

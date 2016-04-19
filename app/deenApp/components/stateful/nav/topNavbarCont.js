@@ -1,17 +1,17 @@
 import { connect } from 'react-redux'
-import { changeTopSectionAction } from '../../../actions'
+import { changeTopNavbarItemAction } from '../../../actions'
 import TopNavbarView from './topNavbarView'
 
 const mapStateToProps = (state, ownProps) => {
 	return {
-		activeTopSectionId: state.activeTopSectionId
+		activeTopNavbarItemId: state.activeTopNavbarItemId
 	}
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
 	return {
-		changeTopSection: (topSectionId) => {
-			dispatch(changeTopSectionAction(topSectionId))
+		changeTopNavbarItem: (topNavbarItemId) => {
+			dispatch(changeTopNavbarItemAction(topNavbarItemId))
 		}
 	}
 }

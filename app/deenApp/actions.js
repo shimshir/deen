@@ -1,5 +1,5 @@
-import { CHANGE_TOP_SECTION_ACTION } from './actionTypes'
+import { CHANGE_TOP_NAVBAR_ITEM_ACTION } from './actionTypes'
 
-export const changeTopSectionAction = (sectionId) => {
-	return { type: CHANGE_TOP_SECTION_ACTION, sectionId: sectionId }
+export const changeTopNavbarItemAction = (topNavbarItemId) => {
+	return { type: CHANGE_TOP_NAVBAR_ITEM_ACTION, topNavbarItemId: topNavbarItemId }
 }

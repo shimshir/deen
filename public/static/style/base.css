@@ -1,0 +1,7 @@
+html, body {
+	height: 100%;
+}
+
+nav .nav-divider.nomargin-divider {
+	margin: 0;
+}

@@ -1,10 +1,13 @@
 import React from 'react'
 import TopNavbarCont from './stateful/nav/topNavbarCont'
 
-const App = () => (
-	<div>
-		<TopNavbarCont />
-	</div>
-)
+const App = ({ children }) => {
+	return (
+		<div>
+			<TopNavbarCont />
+			{children}
+		</div>
+	)
+}
 
 export default App

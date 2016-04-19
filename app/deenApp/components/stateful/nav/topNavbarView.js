@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react'
+import { Link } from 'react-router'
 
-const TopNavbarView = ({ activeTopSectionId, changeTopSection}) => {
+const TopNavbarView = ({ activeTopSectionId, changeTopSection }) => {
 	const topSections = [{ text: 'Home', id: 'home'}, { text: 'Academic', id: 'academic'}, { text: 'Social', id: 'social'}]
 
 	return (
@@ -12,7 +13,7 @@ const TopNavbarView = ({ activeTopSectionId, changeTopSection}) => {
 					<span className="icon-bar"></span>
 					<span className="icon-bar"></span>
 				</button>
-				<a className="navbar-brand" href="/">Kafana</a>
+				<Link className="navbar-brand" to="/" onClick={() => changeTopSection('root')}>Kafana</Link>
 			</div>
 
 			<div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -20,7 +21,7 @@ const TopNavbarView = ({ activeTopSectionId, changeTopSection}) => {
 					{
 						topSections.map(section => 
 							<li className={ section.id == activeTopSectionId ? 'active' : '' } key={section.id}>
-								<a onClick={() => changeTopSection(section.id)}>{section.text}</a>
+								<Link to={`/${section.id}`} onClick={() => changeTopSection(section.id)}>{section.text}</Link>
 							</li>
 						)
 					}
@@ -46,7 +47,7 @@ const TopNavbarView = ({ activeTopSectionId, changeTopSection}) => {
 							</ul>
 						</li>
 						<li>
-							<a href="/login">Sign in</a>
+							<Link to="/login">Sign in</Link>
 						</li>
 					</ul>
 				</div>

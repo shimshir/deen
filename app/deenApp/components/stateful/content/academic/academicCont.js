@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import HomeView from './homeView'
-import { changeTopNavbarItemAction } from '../../../actions'
+import AcademicView from './academicView'
+import { changeTopNavbarItemAction } from '../../../../actions'
 
 const mapDispatchToProps = (dispatch, ownProps) => {
 	return {
@@ -10,6 +10,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 	}
 }
 
-const HomeCont = connect(undefined, mapDispatchToProps)(HomeView)
+const AcademicCont = connect(undefined, mapDispatchToProps)(AcademicView)
 
-export default HomeCont
+export default AcademicCont

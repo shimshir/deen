@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import SocialView from './socialView'
-import { changeTopNavbarItemAction } from '../../../actions'
+import HomeView from './homeView'
+import { changeTopNavbarItemAction } from '../../../../actions'
 
 const mapDispatchToProps = (dispatch, ownProps) => {
 	return {
@@ -10,6 +10,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 	}
 }
 
-const SocialCont = connect(undefined, mapDispatchToProps)(SocialView)
+const HomeCont = connect(undefined, mapDispatchToProps)(HomeView)
 
-export default SocialCont
+export default HomeCont
